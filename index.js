@@ -8,6 +8,7 @@ const app = express();
 // Set up middleware
 app.use(cors());
 app.use(express.urlencoded({ extended: false}));
+app.use(express.json({limit: '50mb'}));
 
 // Controllers -- TBD (note: router needs to be before the catch-all)
 app.use('/v1/bounties', require('./controllers/v1/bounties'));
