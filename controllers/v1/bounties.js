@@ -46,6 +46,10 @@ router.get('/:id', (req, res) => {
 	});
 });
 
+router.put('/:id', (req, res) => {
+	res.send('put western stubby');
+})
+
 router.delete('/:id', (req, res) => {
 	//res.send('DELETE /:id reached!');
 	db.Bounty.findOneAndDelete({ _id: req.params.id })
